@@ -38,13 +38,7 @@ namespace XML
     {
         List<Person> list = new List<Person>();
         XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Person>));
-        public Controller()
-        {
-         
-        }
-
-
-
+        public Controller() { }
         public void run()
         {
 
@@ -57,10 +51,10 @@ namespace XML
             Person Rafiq = new Person("Rafiq", "Rafiqli", time2, "To watch Tv show");
             Person Ismayil = new Person("Ismayil", "Ismayil", time3, "To collect old coins");
             list.Add(Elvin); list.Add(Tofiq); list.Add(Rafiq); list.Add(Ismayil);
-            Console.WriteLine("If you do not have a xml file please write 1 to serialize " +
-                "or if yo have xml file write 2 to deserialize" +
-                "To add new person to list write 3" +
-                "to delete person from list write 4 after name of person ");
+            Console.WriteLine("If you do not have a xml file please write 1 to serialize\n " +
+                "or if yo have xml file write 2 to deserialize\n" +
+                "To add new person to list write 3\n" +
+                "to delete person from list write 4 after name of person \n");
             Console.Write("Select - > ");
             int selection = Convert.ToInt32(Console.ReadLine());
             if (selection == 1)
@@ -86,6 +80,7 @@ namespace XML
                 DeletePersonFromListWithName(name);
                 SerializerToXML();
             }
+            Console.Clear();
             foreach (var item in list)
             {
                 item.ShowPersonProperty();
@@ -142,8 +137,7 @@ namespace XML
         static void Main(string[] args)
         {
             Controller controller = new Controller();
-            controller.run();
-            
+            controller.run();            
         }
     }
 }
