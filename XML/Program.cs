@@ -40,13 +40,7 @@ namespace XML
         XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Person>));
         public Controller()
         {
-            //FileInfo fileInfo = new FileInfo("list1.xml");
-
-            //if (fileInfo.Exists)
-            //{
-            //    list = DeserializerFromXml();
-            //}
-
+         
         }
 
 
